@@ -13,5 +13,6 @@
 #  index_comments_on_article_id  (article_id)
 #
 class Comment < ApplicationRecord
-  belongs_to :article, dependent: :destory
+  belongs_to :article, dependent: :destroy
+  validates :content, presence: true
 end
